@@ -21,6 +21,7 @@ Once imported, just type things like:
 - `gstack review`
 - `gstack qa`
 - `gstack ship`
+- `gstack learn [insight]`
 
 The skill will automatically activate and guide you through the full structured process.
 
@@ -30,23 +31,61 @@ The skill will automatically activate and guide you through the full structured 
 - Strong safety guardrails and "careful mode"
 - Role switching (CEO/Product, Engineering Manager, Designer, QA Lead, etc.)
 - Structured artifacts (Product Vision, Architecture, QA reports, etc.)
+- **GBrain-style learning capture** via `gstack learn`
 - Regular safety & update hygiene reminders
+
+## GBrain-style Memory (LEARNINGS.md)
+
+This repo also supports lightweight persistent memory similar to Garry Tan’s GBrain.
+
+### How to use it
+
+1. Create a file called `LEARNINGS.md` in your project root (or let the skill create it).
+2. Use commands like:
+   - `gstack learn [your insight or decision]`
+   - `gstack remember this`
+   - `gstack learn from this session`
+
+The skill will extract the learning, propose a clean entry, and ask for confirmation before saving it.
+
+This gives you accumulating project knowledge that survives across sessions.
+
+### Recommended LEARNINGS.md Template
+
+```markdown
+# LEARNINGS.md — Project Learnings & Patterns
+
+> Captured insights, decisions, patterns, and gotchas.  
+> Updated via `gstack learn`. This file acts as lightweight persistent memory.
+
+## Recent Learnings
+- **[YYYY-MM-DD]** — [Clear, specific learning + why it mattered]
+
+## Patterns That Work Well Here
+- 
+
+## Things That Didn't Work / Anti-Patterns
+- 
+
+## Decisions We Regret or Reversed
+- 
+
+## Useful Snippets, Gotchas & Context
+- 
+```
 
 ## Recommended: Add GSTACK.md to Your Project
 
-For best long-term results, add a `GSTACK.md` file to your project root. This gives the AI persistent memory about your project’s decisions, conventions, and status.
+For best long-term results, also add a `GSTACK.md` file to your project root. This gives the AI persistent memory about your project’s decisions, conventions, and status.
 
-### Fastest way (uses credits)
-Just paste the entire content below into your Lovable chat:
+### Fastest way
+Just paste this into chat:
 
 ```
 Create a file called GSTACK.md in the root of this project with the following content:
 ```
 
-Then paste the template below.
-
-### Better way (recommended)
-Create the file manually in your project and keep it updated.
+Then paste the GSTACK.md template.
 
 ### GSTACK.md Template
 
@@ -92,7 +131,7 @@ One or two paragraphs describing what this project is, who it's for, and the cor
 
 ## How to Update the Skill Later
 
-If you want to improve the prompt, just edit `SKILL.md` in this repo. Then re-import or ask Lovable to refresh.
+If you want to improve the prompt, just edit `SKILL.md` in this repo. Then re-import the skill in Lovable.
 
 ## Credits
 
